@@ -1,7 +1,12 @@
 <h2>Добавление новой страницы</h2>
-<%= form_for :post, url: pages_path do |f| %>
+<%= form_for :page, url: pages_path do |f| %>
+    <% if @page.errors.any? %>
+        <% @page.errors.full_messages.each do |msg| %>
+            <div><% msg %></div>
+        <% end %>
+    <% end %>
     <div>Ссылка</div>
-    <div><%= f.text_field :link %></div>
+    <div><%= f.text_field :sublink %></div>
     <div>Название</div> 
     <div><%= f.text_field :title %></div>
     <div>Текст</div>
