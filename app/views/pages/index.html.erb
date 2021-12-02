@@ -2,5 +2,5 @@
 <% @page.each do |page| %>
     <h3><%= page.title %></h3>
     <div><%= page.body %></div>
-    <div><%= link_to "Читать далее...", page_path(page) %></div>
+    <div><%= link_to "Читать далее...", page_path(page.sublink) %></div> 
 <% end %>

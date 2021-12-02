@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root "pages#index"
   
-  resources :pages
+  get "/add", to: "pages#add"
+  resources :pages, path: "",  param: :sublink
 end

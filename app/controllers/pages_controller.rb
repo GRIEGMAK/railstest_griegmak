@@ -4,12 +4,12 @@ class PagesController < ApplicationController
         @page = Page.all
     end
 
-    def new
+    def add
         @page = Page.new
     end
 
     def show
-        @page = Page.find(params[:id]);
+        @page = Page.find_by(sublink: params[:sublink]);
     end
 
     def create
