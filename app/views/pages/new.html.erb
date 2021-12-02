@@ -1,8 +1,10 @@
 <h2>Добавление новой страницы</h2>
 <%= form_for :post, url: pages_path do |f| %>
+    <div>Ссылка</div>
+    <div><%= f.text_field :link %></div>
     <div>Название</div> 
     <div><%= f.text_field :title %></div>
-    <div>Текст статьи</div>
+    <div>Текст</div>
     <div><%= f.text_area :body %></div>
     <div><%= f.submit %></div>
 <% end %>
