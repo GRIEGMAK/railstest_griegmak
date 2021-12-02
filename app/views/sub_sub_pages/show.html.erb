@@ -1,0 +1,5 @@
+<h3><%= @subsubpage.title %></h3>
+<div><%= @subsubpage.body %></div>
+
+<div><%= link_to "Редактировать", edit_page_path(@subsubpage.sublink) %></div>
+<div><%= link_to "Удалить страницу", page_path(@subsubpage.sublink), method: :delete, data: {confirm: "Хотите удалить страницу?"} %></div>

@@ -1,4 +1,4 @@
-class Page < ApplicationRecord
+class SubSubPage < ApplicationRecord
     before_save :refactor_text
     before_update :refactor_text
     validates :sublink, presence: true, uniqueness: true, format: { with: /\A[а-яА-ЯёЁa-zA-Z0-9_]+\z/, message: 'Только цифры, буквы и _' }

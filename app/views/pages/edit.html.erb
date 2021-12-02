@@ -1,12 +1,10 @@
-<h2>Добавление новой страницы</h2>
+<h2>Редактирование страницы</h2>
 <%= form_for :page, url: pages_path do |f| %>
-<% if @page %>
     <% if @page.errors.any? %>
         <% @page.errors.full_messages.each do |msg| %>
             <div><% msg %></div>
         <% end %>
     <% end %>
-<% end %>
     <div>Ссылка</div>
     <div><%= f.text_field :sublink %></div>
     <div>Название</div> 

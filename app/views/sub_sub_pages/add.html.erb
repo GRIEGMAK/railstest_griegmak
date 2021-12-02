@@ -1,8 +1,8 @@
 <h2>Добавление новой страницы</h2>
-<%= form_for :page, url: pages_path do |f| %>
-<% if @page %>
-    <% if @page.errors.any? %>
-        <% @page.errors.full_messages.each do |msg| %>
+<%= form_for :subsubpage, url: subsubpages_path do |f| %>
+<% if @subsubpage %>
+    <% if @subsubpage.errors.any? %>
+        <% @subsubpage.errors.full_messages.each do |msg| %>
             <div><% msg %></div>
         <% end %>
     <% end %>
